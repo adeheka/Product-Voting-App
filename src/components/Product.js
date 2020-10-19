@@ -1,7 +1,7 @@
 import React from 'react'
 import Caret from '../caret-up.svg'
-function Product({ id, image, style, count, title, description, avatar, onVote }) {
-  function handleUpvote() {
+function Product({ id, image, url, style, count, title, description, avatar, onVote }) {
+  function handleUpVote() {
     onVote(id)
   }
   return (
@@ -9,12 +9,14 @@ function Product({ id, image, style, count, title, description, avatar, onVote }
       <div className="product-image"><img src={image} style={style} alt=""/></div>      
       <div className="product-deets">
         <div className="vote-count">
+          <p>
           <span>
-            <a onClick={handleUpvote}>
+            <a href={url} onClick={handleUpVote}>
               <img src={Caret} style={{ height: '50px', width: '50px', color: 'blue' }} alt="" />
             </a>
           </span>
           {count}
+          </p>
         </div>
         <div className="product-description">
           <h4>{title}</h4>

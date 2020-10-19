@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import [  products ] from '../seeds'
 import Product from './Product';
 
 const products = [
@@ -44,20 +43,15 @@ const sortedProducts = products.sort((a, b) => (
   b.count - a.count
 ));
 class ProductList extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
+  state = {
       products: [],
-    };
-    this.upVote = this.upVote.bind(this);
-  }
+  };
   componentDidMount() {
     this.setState({
-      products: products,
+      products: sortedProducts,
     })
   }
-  upVote(id) {
+  upVote = (id) => {
     const products = this.state.products;
     products.forEach(product => {
       if (product.id === id) {
@@ -69,9 +63,10 @@ class ProductList extends Component {
     })
   }
   render() {
+    const { products } = this.state;
     return (
       <div className="container">
-        { sortedProducts.map((product) => {
+        { products.map((product) => {
           return (
             <Product key={'product' + product.id} {...product} onVote={this.upVote} />
           )

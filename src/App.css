@@ -1,33 +1,51 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
+
 .product-card {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
 }
+
 .container {
-  margin: 0 20px;
+    margin: 0 20px;
 }
+
 .product-description h4 {
-  color: blue;
+    color: blue;
 }
+
 .product-image {
-  width: 160px;  
-  background-color: #e6d739;
+    width: 20%;
+    background-color: #e6d739;
 }
+
 .product-deets {
-  text-align: left;
-  width: 60%;
+    text-align: left;
+    width: 60%;
 }
+
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
+
 .header {
-  border-bottom: 1px solid black;
-  margin: 0 20px;
+    border-bottom: 1px solid black;
+    margin: 0 20px;
 }
+
 .submission-details p {
-  color: gray;
+    color: gray;
+}
+
+.vote-count {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.vote-count p {
+    transition: all 3s 8s;
+    ;
 }
