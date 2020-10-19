@@ -5,16 +5,13 @@
   display: flex;
   justify-content: space-evenly;
   margin: 25px;
-  width: 60%;
 }
 .container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  margin: 0 20px;
 }
-
+.product-description h4 {
+  color: blue;
+}
 .product-image {
   width: 160px;  
   background-color: #e6d739;
@@ -29,5 +26,8 @@ img {
 }
 .header {
   border-bottom: 1px solid black;
-  width: 100%;
+  margin: 0 20px;
+}
+.submission-details p {
+  color: gray;
 }
