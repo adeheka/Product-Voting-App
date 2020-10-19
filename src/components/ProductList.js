@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import [  products ] from '../seeds'
 import Product from './Product';
 
@@ -43,16 +43,41 @@ const products = [
 const sortedProducts = products.sort((a, b) => (
   b.count - a.count
 ));
-function ProductList() {
-  return (
-    <div className="container">
-    { sortedProducts.map((product) => {
-      return (
-        <Product key={'product' + product.id} {...product} />
-      )
-    })}
-    </div>
-  )
-}
+class ProductList extends Component {
+  constructor(props) {
+    super(props)
 
+    this.state = {
+      products: [],
+    };
+    this.upVote = this.upVote.bind(this);
+  }
+  componentDidMount() {
+    this.setState({
+      products: products,
+    })
+  }
+  upVote(id) {
+    const products = this.state.products;
+    products.forEach(product => {
+      if (product.id === id) {
+          product.count = product.count + 1;
+      }
+    });
+    this.setState({
+      products: products,
+    })
+  }
+  render() {
+    return (
+      <div className="container">
+        { sortedProducts.map((product) => {
+          return (
+            <Product key={'product' + product.id} {...product} onVote={this.upVote} />
+          )
+        })}
+      </div>
+    )
+  }
+}
 export default ProductList;
