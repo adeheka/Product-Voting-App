@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import Product from './Product';
-import Helen
+
+//images assets
+import Helen from '.././images/avatars/helen.jpg'
+import Justen from '.././images/avatars/justen.jpg';
+import Veronika from '.././images/avatars/veronika.jpg';
+import Molly from '.././images/avatars/molly.png';
+
+//products images
+import prdOne from '.././images/products/image-aqua.png'
+import prdTwo from '.././images/products/image-rose.png'
+import prdThree from '.././images/products/image-yellow.png'
+import prdFour from '.././images/products/image.png'
+
 const products = [
   {
     id: 32,
@@ -8,8 +20,8 @@ const products = [
     description: 'On-demand sand castle construction expertise',
     count: 34,
     url: '#',
-    //votes: generateVoteCount(),
-    avatar: '/images/avatar/daniel.jpg'
+    image: prdOne,
+    avatar: Helen
   },
   {
     id: 234,
@@ -17,8 +29,8 @@ const products = [
     description: 'Listen to music curated from the paystack team all on spotify',
     count: 500,
     url: '#',
-    //votes: generateVoteCount(),
-    avatar: '/images/avatar/daniel.jpg'
+    image: prdTwo,
+    avatar: Justen,
   },
   {
     id: 1223,
@@ -26,8 +38,8 @@ const products = [
     description: 'Allow payments using local means from your customers.',
     count: 5,
     url: '#',
-    //votes: generateVoteCount(),
-    avatar: '/images/avatar/daniel.jpg'
+    image: prdThree,
+    avatar: Veronika,
   },
   {
     id: 1,
@@ -35,8 +47,8 @@ const products = [
     description: 'Agricultural Produce are to made from the farm to the local consumers',
     count: 155,
     url: '#',
-    //votes: generateVoteCount(),
-    avatar: '/images/avatar/daniel.jpg'
+    image: prdFour,
+    avatar: Molly,
   },
 ]
 const sortedProducts = products.sort((a, b) => (
