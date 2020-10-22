@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    margin-top: 25px;
 }
 
 .product-card {
@@ -18,7 +19,6 @@
 
 .product-image {
     width: 20%;
-    background-color: #e6d739;
 }
 
 .product-deets {
@@ -36,8 +36,19 @@ img {
     margin: 0 20px;
 }
 
+.submission-details {
+    margin: 18px 0;
+}
+
 .submission-details p {
     color: gray;
+}
+
+.submission-details img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }
 
 .vote-count {
